@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+
+        <style>
+        
+        </style>
+
+</head>
+
+<body>
+
+    <div class="maca" id="maca">
+        clique numa fruta
+    </div>
+
+    <div class="carambola" id="carambola">
+        clique numa fruta
+    </div>
+
+    <div class="jabuticaba" id="jabuticaba">
+        clique numa fruta
+    </div>
+    
+    <img onclick="executar('m');" src='maca.jpeg' width="100px"></button>
+    <img onclick="executar('c');" src='carambola.jpg' width="100px"></button>
+    <img onclick="executar('j');" src='jabuticaba.jpeg' width="100px"></button>
+    <button onclick="apagar()">apagar</button>
+    <br> <br>
+    total de maças:<span id="total_maca">0</span>
+    total de carambola:<span id="total_carambola">0</span>
+    total de jabuticaba:<span id="total_jabuticaba">0</span>
+</body>
+
+    <script>
+
+     m = 0;
+     c = 0;
+     j = 0;
+
+
+
+        function executar(letra)
+        {
+        
+
+         if(letra == 'm')
+         {
+            m=m+1
+            total_maca.innerHTML = m;
+            maca.innerHTML += "<img src='maca.jpeg' width='100px'>";
+         }
+
+         if(letra == 'c')
+         {
+            c=c+1
+            total_carambola.innerHTML = c;
+            carambola.innerHTML += "<img src='carambola.jpg' width='100px'>";
+         }
+
+         if(letra == 'j')
+         {
+            j=j+1
+            total_jabuticaba.innerHTML = j;
+            jabuticaba.innerHTML += "<img src='jabuticaba.jpg' width='100px'>";
+         }
+
+        } 
+
+        function apagar()
+        {
+            maca.innerHTML = " ";
+            carambola.innerHTML = " ";
+            jabuticaba.innerHTML = " ";
+            total_maca.innerHTML = " ";
+            total_carambola.innerHTML = " ";
+            total_jabuticaba.innerHTML = " ";
+        }
+
+    </script>
+
+    
+
+</html>
